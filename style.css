@@ -8,9 +8,11 @@ body {
     
 }
 
-/* .button {
+li {
     align-items: center;
-} */
+    list-style: none;
+    margin: 5px 0 5px 0;
+}
 
 .quiz-intro {
     text-align: center;
@@ -19,4 +21,12 @@ body {
 
 .hide {
     display: none;
+}
+
+#question {
+    font-size: x-large;
+}
+
+#answerChoice {
+    text-align: center;
 }

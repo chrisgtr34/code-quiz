@@ -33,8 +33,18 @@
     <div class="col text-center">
         <div id="question-box" class="hide">
             <div id="question">Question Box</div>
-            <div id="answerBtn"></div>
+            <div id= "choices">
+                <ul>
+                    <li><button class="btn" type="button" id="1" onclick="checkAnswer('1')"></button></li>
+                    <li><button class="btn" type="button" id="2" onclick="checkAnswer('2')"></button></li>
+                    <li><button class="btn" type="button" id="3" onclick="checkAnswer('3')"></button></li>
+                    <li><button class="btn" type="button" id="4" onclick="checkAnswer('4')"></button></li>
+                </ul>
+            </div>
+            <div id="answerChoice"></div>
         </div> 
+
+        <div id="score"></div>
 
         <div id="buttons">    
             <h5 class="hide">Click to Start!</h5>
