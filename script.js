@@ -7,7 +7,10 @@ var choice1 = document.getElementById('1');
 var choice2 = document.getElementById('2');
 var choice3 = document.getElementById('3');
 var choice4= document.getElementById('4');
-var result = document.getElementById('score')
+var result = document.getElementById('score');
+var finalScore = document.getElementById('final');
+var initialsInput = document.getElementById('initials');
+var submitBtn = document.getElementById('submit-score')
 var score = 0;
 var timeRemaining = 60;
 var timer;
@@ -99,12 +102,10 @@ function displayQuestions() {
 function checkAnswer(answer) {
     if(questions[questionIndex].correct == answer) {
         answerChoice.textContent = "Correct!"
-    }
-    else {
+    } else {
        answerChoice.textContent = "Wrong!"
        timeRemaining-=10;
     }
-
     if (questions.length === questionIndex+1) {
         showResults(); // If it has gone through all questions, show final score
         return;
@@ -114,8 +115,26 @@ function checkAnswer(answer) {
     };
 
     function showResults() {
+        finalScore.classList.remove('hide');
         if (timeRemaining === 0 || questions.length -1) { 
          result.textContent = "Your final score is " + timeRemaining + ".";
         }
      };
-     
+
+    // on SUBMIT button, stores score and initial
+     submitBtn.addEventListener('click',() =>{
+        submitScore();
+    });
+    
+    function submitScore() {
+    // create function to grab initial on "submit click" and store score
+    // score is based on timeRemaining variable
+    // use localstorage.setItem to store
+        
+    };
+
+    // create a function to access stored scores from clicking view score link
+    // use local.storage.getItem
+    // create <li> in javascript to show all scores OR created <li> in HMTL and hide 
+
+    
